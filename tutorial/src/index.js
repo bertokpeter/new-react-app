@@ -13,7 +13,22 @@ const pics = {
 
 const img = <img src={pics[coinToss() === 'heads' ? 'kitty' : 'doggy']} />;
 
+const judgmental = Math.random() < 0.5;
+
+const favoriteFoods = (
+  <div>
+    {img}
+    <h1>My Favorite Foods</h1>
+    <ul>
+      <li>Sushi Burrito</li>
+      <li>Rhubarb Pie</li>
+      {!judgmental && <li>Nacho Cheez Straight Out The Jar</li>}
+      <li>Broiled Grapefruit</li>
+    </ul>
+  </div>
+);
+
 ReactDOM.render(
-	img, 
-	document.getElementById('app')
+	favoriteFoods, 
+	document.getElementById('root')
 );
