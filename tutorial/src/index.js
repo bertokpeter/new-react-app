@@ -1,23 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { img } from './img.js'
+import {FavoriteFoods} from "./foods.js"
 
-const judgmental = Math.random() < 0.5;
-
-const favoriteFoods = (
-  <div>
-    {img}
-    <h1>My Favorite Foods</h1>
-    <ul>
-      <li>Sushi Burrito</li>
-      <li>Rhubarb Pie</li>
-      {!judgmental && <li>Nacho Cheez Straight Out The Jar</li>}
-      <li>Broiled Grapefruit</li>
-    </ul>
-  </div>
-);
 
 ReactDOM.render(
-	favoriteFoods, 
+	<FavoriteFoods>
+        <li>Sushi Burrito</li>
+        <li>Rhubarb Pie</li>
+        <li>Broiled Grapefruit</li>
+    </FavoriteFoods>, 
 	document.getElementById('root')
 );
