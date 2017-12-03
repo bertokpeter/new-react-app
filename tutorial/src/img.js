@@ -10,4 +10,4 @@ const pics = {
     doggy: 'https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-puppy.jpeg'
 };
   
-export const img = <img src={pics[coinToss() === 'heads' ? 'kitty' : 'doggy']} />;
+export const img = <img src={pics[coinToss() === 'heads' ? 'kitty' : 'doggy']} width="300px"/>;
