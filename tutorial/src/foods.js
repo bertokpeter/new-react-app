@@ -9,6 +9,7 @@ export class FavoriteFoods extends React.Component {
       <div>
         {img}
         <h1>My Favorite Foods</h1>
+        <h2>{this.props.text}</h2>
         <ul>
           {!judgmental && <li>Nacho Cheez Straight Out The Jar</li>}
           {this.props.children}
@@ -17,3 +18,5 @@ export class FavoriteFoods extends React.Component {
     )
   }
 }
+
+FavoriteFoods.defaultProps = {text:"Whoa there!"}
